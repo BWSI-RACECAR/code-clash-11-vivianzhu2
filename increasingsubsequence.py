@@ -3,16 +3,19 @@ class Solution:
             #type arr: list of int
             #return type: int
             #arr=arr.sort()
-            count=1
+
+            if(len(arr)!=0):
+                count=1
+                for i in range(1,arr):
+                    if(arr[i]>arr[i+1]):
+                        count+=1
+                    else:
+                        count=0
+            else:
+                count=0
             
-            for i in range(1,arr):
-                if(arr[i]>arr[i+1]):
-                    count+=1
-                else:
-                    count=0
-            
+            return count
             #TODO: Write code below to return an int with the solution to the prompt.
-            pass
 
 def main():
     array = input().split(" ")
