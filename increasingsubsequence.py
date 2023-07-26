@@ -6,11 +6,13 @@ class Solution:
 
             if(len(arr)!=0):
                 count=1
-                for i in range(1,arr):
-                    if(arr[i]>arr[i+1]):
+                for i in range(1,len(arr)):
+                    if(arr[i]>arr[i-1]):
                         count+=1
                     else:
-                        count=0
+                        count=1
+                print(arr)
+                print(count)
             else:
                 count=0
             
